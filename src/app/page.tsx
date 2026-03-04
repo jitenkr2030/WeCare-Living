@@ -52,6 +52,7 @@ import ActivityTimeline from '@/components/timeline/ActivityTimeline';
 import AIAnomalyDetection from '@/components/ai/AIAnomalyDetection';
 import CaregiverDashboard from '@/components/caregiver/CaregiverDashboard';
 import RoomVisualization from '@/components/rooms/RoomVisualization';
+import ReportsInterface from '@/components/reports/ReportsInterface';
 
 // Import mock data
 import { MockDataGenerator } from '@/lib/mockData';
@@ -436,7 +437,7 @@ const WeCareLivingDashboard: React.FC = () => {
       {/* Main Content */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
         <Tabs value={selectedView} onValueChange={(value) => setSelectedView(value as any)} className="space-y-6">
-          <TabsList className="grid w-full grid-cols-7 h-14">
+          <TabsList className="grid w-full grid-cols-8 h-14">
             <TabsTrigger value="overview" className="flex items-center space-x-2">
               <Globe className="w-5 h-5" />
               <span className="font-medium">Overview</span>
@@ -475,6 +476,10 @@ const WeCareLivingDashboard: React.FC = () => {
             <TabsTrigger value="rooms" className="flex items-center space-x-2">
               <Home className="w-5 h-5" />
               <span className="font-medium">Room Zones</span>
+            </TabsTrigger>
+            <TabsTrigger value="reports" className="flex items-center space-x-2">
+              <FileText className="w-5 h-5" />
+              <span className="font-medium">Reports</span>
             </TabsTrigger>
             <TabsTrigger value="analytics" className="flex items-center space-x-2">
               <BarChart3 className="w-5 h-5" />
@@ -716,6 +721,19 @@ const WeCareLivingDashboard: React.FC = () => {
 
           <TabsContent value="rooms">
             <RoomVisualization residents={residents} />
+          </TabsContent>
+
+          <TabsContent value="reports">
+            <ReportsInterface
+              residents={residents}
+              vitalSignsReadings={vitalSignsReadings}
+              breathingPatterns={breathingPatterns}
+              sleepSessions={sleepSessions}
+              vitalSignsAlerts={vitalSignsAlerts}
+              fallEvents={fallEvents}
+              immobilityAlerts={immobilityAlerts}
+              riskAssessments={riskAssessments}
+            />
           </TabsContent>
 
           <TabsContent value="analytics">
