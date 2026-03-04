@@ -51,6 +51,7 @@ import FallDetectionDashboard from '@/components/fallDetection/FallDetectionDash
 import ActivityTimeline from '@/components/timeline/ActivityTimeline';
 import AIAnomalyDetection from '@/components/ai/AIAnomalyDetection';
 import CaregiverDashboard from '@/components/caregiver/CaregiverDashboard';
+import RoomVisualization from '@/components/rooms/RoomVisualization';
 
 // Import mock data
 import { MockDataGenerator } from '@/lib/mockData';
@@ -435,7 +436,7 @@ const WeCareLivingDashboard: React.FC = () => {
       {/* Main Content */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
         <Tabs value={selectedView} onValueChange={(value) => setSelectedView(value as any)} className="space-y-6">
-          <TabsList className="grid w-full grid-cols-6 h-14">
+          <TabsList className="grid w-full grid-cols-7 h-14">
             <TabsTrigger value="overview" className="flex items-center space-x-2">
               <Globe className="w-5 h-5" />
               <span className="font-medium">Overview</span>
@@ -470,6 +471,10 @@ const WeCareLivingDashboard: React.FC = () => {
             <TabsTrigger value="caregivers" className="flex items-center space-x-2">
               <Users className="w-5 h-5" />
               <span className="font-medium">Caregivers</span>
+            </TabsTrigger>
+            <TabsTrigger value="rooms" className="flex items-center space-x-2">
+              <Home className="w-5 h-5" />
+              <span className="font-medium">Room Zones</span>
             </TabsTrigger>
             <TabsTrigger value="analytics" className="flex items-center space-x-2">
               <BarChart3 className="w-5 h-5" />
@@ -707,6 +712,10 @@ const WeCareLivingDashboard: React.FC = () => {
 
           <TabsContent value="caregivers">
             <CaregiverDashboard residents={residents} />
+          </TabsContent>
+
+          <TabsContent value="rooms">
+            <RoomVisualization residents={residents} />
           </TabsContent>
 
           <TabsContent value="analytics">
