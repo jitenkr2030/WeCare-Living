@@ -1,141 +1,417 @@
-# 🚀 Welcome to Z.ai Code Scaffold
+# 🏠 WeCare Living - Comprehensive Elderly Care Monitoring System
 
-A modern, production-ready web application scaffold powered by cutting-edge technologies, designed to accelerate your development with [Z.ai](https://chat.z.ai)'s AI-powered coding assistance.
+<div align="center">
 
-## ✨ Technology Stack
+![WeCare Living Logo](https://img.shields.io/badge/WeCare-Living-blue?style=for-the-badge)
+![Version](https://img.shields.io/badge/version-1.0.0-green?style=for-the-badge)
+![License](https://img.shields.io/badge/license-MIT-blue?style=for-the-badge)
+![Next.js](https://img.shields.io/badge/Next.js-16.1-black?style=for-thebadge)
+![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue?style=for-the-badge)
 
-This scaffold provides a robust foundation built with:
+**Privacy-First WiFi Sensing Technology for Elderly Care**
 
-### 🎯 Core Framework
-- **⚡ Next.js 16** - The React framework for production with App Router
-- **📘 TypeScript 5** - Type-safe JavaScript for better developer experience
-- **🎨 Tailwind CSS 4** - Utility-first CSS framework for rapid UI development
+[Live Demo](#) • [Documentation](#documentation) • [Features](#features) • [Installation](#installation)
 
-### 🧩 UI Components & Styling
-- **🧩 shadcn/ui** - High-quality, accessible components built on Radix UI
-- **🎯 Lucide React** - Beautiful & consistent icon library
-- **🌈 Framer Motion** - Production-ready motion library for React
-- **🎨 Next Themes** - Perfect dark mode in 2 lines of code
+</div>
 
-### 📋 Forms & Validation
-- **🎣 React Hook Form** - Performant forms with easy validation
-- **✅ Zod** - TypeScript-first schema validation
+## 📋 Table of Contents
 
-### 🔄 State Management & Data Fetching
-- **🐻 Zustand** - Simple, scalable state management
-- **🔄 TanStack Query** - Powerful data synchronization for React
-- **🌐 Fetch** - Promise-based HTTP request
+- [🌟 About](#-about)
+- [✨ Features](#-features)
+- [🏗️ Architecture](#️-architecture)
+- [🚀 Installation](#-installation)
+- [⚙️ Configuration](#️-configuration)
+- [📱 Product Tiers](#-product-tiers)
+- [🔧 Technology Stack](#-technology-stack)
+- [📊 Dashboard Features](#-dashboard-features)
+- [🔐 Privacy & Security](#-privacy--security)
+- [🤝 Contributing](#-contributing)
+- [📄 License](#-license)
 
-### 🗄️ Database & Backend
-- **🗄️ Prisma** - Next-generation TypeScript ORM
-- **🔐 NextAuth.js** - Complete open-source authentication solution
+## 🌟 About
 
-### 🎨 Advanced UI Features
-- **📊 TanStack Table** - Headless UI for building tables and datagrids
-- **🖱️ DND Kit** - Modern drag and drop toolkit for React
-- **📊 Recharts** - Redefined chart library built with React and D3
-- **🖼️ Sharp** - High performance image processing
+**WeCare Living** is a comprehensive elderly care monitoring system powered by RuView's innovative WiFi sensing technology. Our platform provides real-time monitoring, fall detection, vital signs tracking, and AI-powered anomaly detection - all without compromising privacy through camera-free sensing.
 
-### 🌍 Internationalization & Utilities
-- **🌍 Next Intl** - Internationalization library for Next.js
-- **📅 Date-fns** - Modern JavaScript date utility library
-- **🪝 ReactUse** - Collection of essential React hooks for modern development
+### 🎯 Mission
 
-## 🎯 Why This Scaffold?
+To provide elderly individuals with independence and dignity while giving families and caregivers peace of mind through advanced, privacy-first monitoring technology.
 
-- **🏎️ Fast Development** - Pre-configured tooling and best practices
-- **🎨 Beautiful UI** - Complete shadcn/ui component library with advanced interactions
-- **🔒 Type Safety** - Full TypeScript configuration with Zod validation
-- **📱 Responsive** - Mobile-first design principles with smooth animations
-- **🗄️ Database Ready** - Prisma ORM configured for rapid backend development
-- **🔐 Auth Included** - NextAuth.js for secure authentication flows
-- **📊 Data Visualization** - Charts, tables, and drag-and-drop functionality
-- **🌍 i18n Ready** - Multi-language support with Next Intl
-- **🚀 Production Ready** - Optimized build and deployment settings
-- **🤖 AI-Friendly** - Structured codebase perfect for AI assistance
+### 🏆 Key Benefits
 
-## 🚀 Quick Start
+- **🔒 Privacy-First**: No cameras or audio recording - uses WiFi sensing only
+- **⚡ Real-Time Monitoring**: Instant alerts and live status updates
+- **🧠 AI-Powered**: Predictive analytics and anomaly detection
+- **📱 Multi-Platform**: Web dashboard and mobile applications
+- **🏥 Healthcare Integration**: Compatible with existing healthcare systems
+- **🌐 24/7 Monitoring**: Continuous monitoring with smart alerting
 
-```bash
-# Install dependencies
-bun install
+## ✨ Features
 
-# Start development server
-bun run dev
+### 🏠 **Real-Time Presence & Movement Detection**
+- **Room-Level Occupancy**: Monitor which rooms residents are in
+- **Movement Path Tracking**: Track movement patterns throughout the facility
+- **Direction Sensing**: Detect movement direction and changes
+- **Through-Wall Detection**: Sense presence even through walls and corners
+- **Real-Time Updates**: Live status changes with instant notifications
 
-# Build for production
-bun run build
+### 🛡️ **Fall Detection & Monitoring**
+- **Non-Visual Detection**: Advanced algorithms detect falls without cameras
+- **Real-Time Alerts**: Immediate notifications when falls are detected
+- **Severity Assessment**: Automatic categorization of fall severity
+- **Emergency Response**: Integrated emergency workflow and escalation
+- **Prevention Analytics**: Identify residents at high risk of falls
 
-# Start production server
-bun start
+### 💫 **Breathing & Vital Motion Monitoring**
+- **Breathing Rate Tracking**: Real-time respiratory rate monitoring
+- **Heart Rate Monitoring**: Continuous cardiac rhythm tracking
+- **Sleep Quality Analysis**: Comprehensive sleep pattern assessment
+- **Trend Analysis**: Long-term vital signs trend monitoring
+- **Irregular Pattern Detection**: AI-powered anomaly identification
+
+### 🌙 **Sleep & Inactivity Insights**
+- **Sleep Session Tracking**: Monitor sleep duration and quality
+- **Inactivity Detection**: Alert on prolonged periods of no movement
+- **Nighttime Wandering**: Detect unusual nighttime activity patterns
+- **Sleep Environment**: Monitor bedroom conditions and disturbances
+- **Rest Patterns**: Analyze rest vs activity cycles
+
+### 🚨 **Smart Alerting & Escalation**
+- **Multi-Level Alerts**: Low, medium, high, and critical alert severity
+- **Real-Time Notifications**: Instant alerts via app, SMS, email
+- **Escalation Hierarchy**: Automatic escalation to emergency contacts
+- **Custom Alert Rules**: Configure personalized alert thresholds
+- **Alert Acknowledgment**: Track alert acknowledgment and response
+
+### 📊 **Activity Timeline & History**
+- **Comprehensive Timeline**: Complete history of all resident activities
+- **Event Filtering**: Filter by type, resident, time range, and severity
+- **Pattern Recognition**: Identify recurring patterns and anomalies
+- **Export Reports**: Generate detailed reports for healthcare providers
+- **Search Functionality**: Quick access to specific events and incidents
+
+### 🧠 **AI Anomaly Detection**
+- **Machine Learning Models**: Advanced algorithms for pattern recognition
+- **Predictive Analytics**: Anticipate potential health issues
+- **Behavioral Analysis**: Monitor changes in daily routines
+- **Confidence Scoring**: AI confidence levels for all predictions
+- **Recommendations**: AI-powered care recommendations
+
+### 👥 **Caregiver & Family Dashboard**
+- **Role-Based Access**: Different access levels for various user types
+- **Real-Time Monitoring**: Live dashboard with current status
+- **Multi-Resident View**: Monitor multiple residents simultaneously
+- **Mobile Access**: Full functionality on mobile devices
+- **Family Portal**: Secure access for family members
+
+### 🏠 **Room-Level Motion Zones**
+- **Zone Mapping**: Visual representation of motion zones
+- **Room Occupancy**: Real-time room occupancy status
+- **Privacy Zones**: Configure privacy-sensitive areas
+- **Environmental Monitoring**: Track temperature and humidity
+- **Zone Analytics**: Analyze movement patterns by zone
+
+## 🏗️ Architecture
+
+```
+WeCare Living/
+├── 📱 Frontend (Next.js 16)
+│   ├── Dashboard & Analytics
+│   ├── Real-time Monitoring
+│   ├── Alert Management
+│   └── Mobile Responsive UI
+├── 🔌 Backend Services
+│   ├── WebSocket Real-time Updates
+│   ├── AI/ML Processing
+│   ├── Alert Engine
+│   └── Data Analytics
+├── 📊 Data Processing
+│   ├── WiFi Signal Analysis
+│   ├── Pattern Recognition
+│   ├── Anomaly Detection
+│   └── Predictive Analytics
+└── 🔐 Security & Privacy
+    ├── End-to-End Encryption
+    ├── Data Anonymization
+    ├── Access Control
+    └── Privacy Compliance
 ```
 
-Open [http://localhost:3000](http://localhost:3000) to see your application running.
+## 🚀 Installation
 
-## 🤖 Powered by Z.ai
+### Prerequisites
 
-This scaffold is optimized for use with [Z.ai](https://chat.z.ai) - your AI assistant for:
+- Node.js 18+ 
+- npm or yarn or bun
+- Git
+- Modern web browser
 
-- **💻 Code Generation** - Generate components, pages, and features instantly
-- **🎨 UI Development** - Create beautiful interfaces with AI assistance  
-- **🔧 Bug Fixing** - Identify and resolve issues with intelligent suggestions
-- **📝 Documentation** - Auto-generate comprehensive documentation
-- **🚀 Optimization** - Performance improvements and best practices
+### Quick Start
 
-Ready to build something amazing? Start chatting with Z.ai at [chat.z.ai](https://chat.z.ai) and experience the future of AI-powered development!
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/jitenkr2030/WeCare-Living.git
+   cd WeCare-Living
+   ```
 
-## 📁 Project Structure
+2. **Install dependencies**
+   ```bash
+   bun install
+   ```
 
+3. **Set up environment variables**
+   ```bash
+   cp .env.example .env.local
+   # Edit .env.local with your configuration
+   ```
+
+4. **Set up the database**
+   ```bash
+   bun run db:push
+   bun run db:generate
+   ```
+
+5. **Start the development server**
+   ```bash
+   bun run dev
+   ```
+
+6. **Open your browser**
+   Navigate to [http://localhost:3000](http://localhost:3000)
+
+### Environment Variables
+
+Create a `.env.local` file in the root directory:
+
+```env
+# Database
+DATABASE_URL="file:./dev.db"
+
+# Next.js
+NEXTAUTH_URL="http://localhost:3000"
+NEXTAUTH_SECRET="your-secret-key"
+
+# WebSocket
+WEBSOCKET_URL="ws://localhost:3001"
+
+# AI Services
+AI_API_KEY="your-ai-api-key"
+AI_MODEL_ENDPOINT="https://api.ai-service.com"
+
+# External Services
+NOTIFICATION_SERVICE_URL="https://api.notifications.com"
+EMERGENCY_SERVICE_URL="https://api.emergency.com"
 ```
-src/
-├── app/                 # Next.js App Router pages
-├── components/          # Reusable React components
-│   └── ui/             # shadcn/ui components
-├── hooks/              # Custom React hooks
-└── lib/                # Utility functions and configurations
+
+## ⚙️ Configuration
+
+### System Configuration
+
+The system can be configured through the admin dashboard or by editing the configuration files:
+
+```typescript
+// config/system.ts
+export const systemConfig = {
+  monitoring: {
+    presenceDetectionInterval: 5000, // ms
+    vitalSignsUpdateInterval: 10000, // ms
+    fallDetectionSensitivity: 0.8,
+    alertEscalationTime: 300000, // 5 minutes
+  },
+  alerts: {
+    enableSMS: true,
+    enableEmail: true,
+    enablePush: true,
+    escalationLevels: ['family', 'caregiver', 'emergency'],
+  },
+  privacy: {
+    dataRetentionDays: 365,
+    anonymizeData: true,
+    enablePrivacyZones: true,
+  }
+}
 ```
 
-## 🎨 Available Features & Components
+### Alert Configuration
 
-This scaffold includes a comprehensive set of modern web development tools:
+Customize alert thresholds and rules:
 
-### 🧩 UI Components (shadcn/ui)
-- **Layout**: Card, Separator, Aspect Ratio, Resizable Panels
-- **Forms**: Input, Textarea, Select, Checkbox, Radio Group, Switch
-- **Feedback**: Alert, Toast (Sonner), Progress, Skeleton
-- **Navigation**: Breadcrumb, Menubar, Navigation Menu, Pagination
-- **Overlay**: Dialog, Sheet, Popover, Tooltip, Hover Card
-- **Data Display**: Badge, Avatar, Calendar
+```typescript
+// config/alerts.ts
+export const alertThresholds = {
+  fallDetection: {
+    sensitivity: 0.8,
+    minimumImpact: 0.6,
+    confirmationTime: 5000,
+  },
+  vitalSigns: {
+    heartRate: { min: 40, max: 120, critical: { min: 30, max: 140 } },
+    breathingRate: { min: 8, max: 24, critical: { min: 6, max: 30 } },
+    bloodOxygen: { min: 95, critical: 90 },
+  },
+  inactivity: {
+    maximumDuration: 3600000, // 1 hour
+    nightTimeMaximum: 7200000, // 2 hours
+    warningThreshold: 0.8,
+  }
+}
+```
 
-### 📊 Advanced Data Features
-- **Tables**: Powerful data tables with sorting, filtering, pagination (TanStack Table)
-- **Charts**: Beautiful visualizations with Recharts
-- **Forms**: Type-safe forms with React Hook Form + Zod validation
+## 📱 Product Tiers
 
-### 🎨 Interactive Features
-- **Animations**: Smooth micro-interactions with Framer Motion
-- **Drag & Drop**: Modern drag-and-drop functionality with DND Kit
-- **Theme Switching**: Built-in dark/light mode support
+### 🆓 **Basic Tier - $49/month**
+- ✅ Real-time presence detection
+- ✅ Fall detection & alerts
+- ✅ Basic dashboard access
+- ✅ Email notifications
+- ✅ 1 resident monitoring
 
-### 🔐 Backend Integration
-- **Authentication**: Ready-to-use auth flows with NextAuth.js
-- **Database**: Type-safe database operations with Prisma
-- **API Client**: HTTP requests with Fetch + TanStack Query
-- **State Management**: Simple and scalable with Zustand
+### 📈 **Plus Tier - $99/month**
+- ✅ All Basic features
+- ✅ Breathing & vital monitoring
+- ✅ Sleep analytics
+- ✅ AI anomaly detection
+- ✅ SMS & push notifications
+- ✅ 5 residents monitoring
+- ✅ Mobile app access
 
-### 🌍 Production Features
-- **Internationalization**: Multi-language support with Next Intl
-- **Image Optimization**: Automatic image processing with Sharp
-- **Type Safety**: End-to-end TypeScript with Zod validation
-- **Essential Hooks**: 100+ useful React hooks with ReactUse for common patterns
+### 🏆 **Pro Tier - $199/month**
+- ✅ All Plus features
+- ✅ Emergency concierge service
+- ✅ API integrations
+- ✅ Advanced analytics
+- ✅ Custom alert rules
+- ✅ 24/7 phone support
+- ✅ Unlimited residents
+- ✅ White-label options
 
-## 🤝 Get Started with Z.ai
+## 🔧 Technology Stack
 
-1. **Clone this scaffold** to jumpstart your project
-2. **Visit [chat.z.ai](https://chat.z.ai)** to access your AI coding assistant
-3. **Start building** with intelligent code generation and assistance
-4. **Deploy with confidence** using the production-ready setup
+### Frontend
+- **Next.js 16** - React framework with App Router
+- **TypeScript 5** - Type-safe development
+- **Tailwind CSS 4** - Modern styling
+- **shadcn/ui** - Component library
+- **Framer Motion** - Animations
+- **Recharts** - Data visualization
+
+### Backend
+- **Node.js** - Runtime environment
+- **Prisma** - Database ORM
+- **SQLite** - Database (development)
+- **WebSocket** - Real-time communication
+- **Z-AI-Web-Dev-SDK** - AI integration
+
+### AI/ML
+- **Machine Learning Models** - Pattern recognition
+- **Anomaly Detection** - Behavioral analysis
+- **Predictive Analytics** - Risk assessment
+- **Computer Vision** - Motion analysis (WiFi-based)
+
+### DevOps
+- **Vercel** - Deployment platform
+- **GitHub Actions** - CI/CD
+- **ESLint** - Code quality
+- **TypeScript** - Type checking
+
+## 📊 Dashboard Features
+
+### 🏠 **Main Dashboard**
+- **Overview Panel**: System status and key metrics
+- **Real-time Alerts**: Active alerts and notifications
+- **Resident Status**: Current status of all residents
+- **System Health**: Monitoring system performance
+
+### 📈 **Analytics Dashboard**
+- **Trend Analysis**: Long-term trends and patterns
+- **Activity Timeline**: Complete activity history
+- **AI Insights**: Machine learning predictions
+- **Pattern Recognition**: Behavioral pattern analysis
+
+### 👥 **Resident Management**
+- **Individual Profiles**: Detailed resident information
+- **Health History**: Medical history and conditions
+- **Care Plans**: Personalized care plans
+- **Family Access**: Secure family portal access
+
+### 🚨 **Alert Management**
+- **Alert Configuration**: Custom alert rules
+- **Escalation Settings**: Multi-level escalation
+- **Notification Channels**: Multiple notification methods
+- **Alert History**: Complete alert log and analysis
+
+## 🔐 Privacy & Security
+
+### 🛡️ **Security Features**
+- **End-to-End Encryption**: All data encrypted in transit and at rest
+- **Role-Based Access**: Granular access control
+- **Audit Logging**: Complete audit trail
+- **Secure Authentication**: Multi-factor authentication support
+- **HIPAA Compliance**: Healthcare data protection standards
+
+### 🔒 **Privacy Protection**
+- **No Cameras**: Absolutely no video or audio recording
+- **WiFi Sensing Only**: Privacy-first sensing technology
+- **Data Anonymization**: Personal data protection
+- **Privacy Zones**: Configurable privacy-sensitive areas
+- **Data Minimization**: Collect only necessary data
+
+### 📋 **Compliance**
+- **GDPR Compliant**: European data protection standards
+- **HIPAA Compliant**: Healthcare privacy regulations
+- **SOC 2 Type II**: Security compliance certification
+- **ISO 27001**: Information security management
+
+## 🤝 Contributing
+
+We welcome contributions from the community! Here's how you can help:
+
+### 🐛 **Bug Reports**
+- Use the [Issue Tracker](https://github.com/jitenkr2030/WeCare-Living/issues) for bug reports
+- Provide detailed information about the issue
+- Include steps to reproduce the problem
+
+### 💡 **Feature Requests**
+- Submit feature requests through GitHub Issues
+- Describe the use case and expected behavior
+- Provide mockups or examples if possible
+
+### 🔧 **Development**
+1. Fork the repository
+2. Create a feature branch: `git checkout -b feature/amazing-feature`
+3. Commit your changes: `git commit -m 'Add amazing feature'`
+4. Push to the branch: `git push origin feature/amazing-feature`
+5. Open a Pull Request
+
+### 📝 **Code Style**
+- Follow TypeScript best practices
+- Use ESLint and Prettier for code formatting
+- Write comprehensive tests
+- Update documentation
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 🙏 Acknowledgments
+
+- **RuView** - For the innovative WiFi sensing technology
+- **Next.js Team** - For the amazing React framework
+- **shadcn/ui** - For the beautiful component library
+- **Our Contributors** - For making this project possible
+
+## 📞 Contact
+
+- **Website**: [wecareliving.com](https://wecareliving.com)
+- **Email**: [support@wecareliving.com](mailto:support@wecareliving.com)
+- **GitHub**: [jitenkr2030/WeCare-Living](https://github.com/jitenkr2030/WeCare-Living)
+- **Twitter**: [@WeCareLiving](https://twitter.com/WeCareLiving)
 
 ---
 
-Built with ❤️ for the developer community. Supercharged by [Z.ai](https://chat.z.ai) 🚀
+<div align="center">
+
+**🏠 Empowering Elderly Independence Through Technology**
+
+Made with ❤️ for our elderly community
+
+</div>
