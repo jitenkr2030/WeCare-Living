@@ -50,6 +50,7 @@ import VitalSignsDashboard from '@/components/vitalSigns/VitalSignsDashboard';
 import FallDetectionDashboard from '@/components/fallDetection/FallDetectionDashboard';
 import ActivityTimeline from '@/components/timeline/ActivityTimeline';
 import AIAnomalyDetection from '@/components/ai/AIAnomalyDetection';
+import CaregiverDashboard from '@/components/caregiver/CaregiverDashboard';
 
 // Import mock data
 import { MockDataGenerator } from '@/lib/mockData';
@@ -434,7 +435,7 @@ const WeCareLivingDashboard: React.FC = () => {
       {/* Main Content */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
         <Tabs value={selectedView} onValueChange={(value) => setSelectedView(value as any)} className="space-y-6">
-          <TabsList className="grid w-full grid-cols-5 h-14">
+          <TabsList className="grid w-full grid-cols-6 h-14">
             <TabsTrigger value="overview" className="flex items-center space-x-2">
               <Globe className="w-5 h-5" />
               <span className="font-medium">Overview</span>
@@ -465,6 +466,10 @@ const WeCareLivingDashboard: React.FC = () => {
                   {fallEvents.filter(f => f.responseStatus === 'pending').length}
                 </Badge>
               )}
+            </TabsTrigger>
+            <TabsTrigger value="caregivers" className="flex items-center space-x-2">
+              <Users className="w-5 h-5" />
+              <span className="font-medium">Caregivers</span>
             </TabsTrigger>
             <TabsTrigger value="analytics" className="flex items-center space-x-2">
               <BarChart3 className="w-5 h-5" />
@@ -698,6 +703,10 @@ const WeCareLivingDashboard: React.FC = () => {
               stats={fallDetectionStats}
               onRefresh={handleRefresh}
             />
+          </TabsContent>
+
+          <TabsContent value="caregivers">
+            <CaregiverDashboard residents={residents} />
           </TabsContent>
 
           <TabsContent value="analytics">
