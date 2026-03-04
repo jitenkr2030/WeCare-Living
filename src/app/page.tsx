@@ -54,6 +54,7 @@ import CaregiverDashboard from '@/components/caregiver/CaregiverDashboard';
 import RoomVisualization from '@/components/rooms/RoomVisualization';
 import ReportsInterface from '@/components/reports/ReportsInterface';
 import MobileAppInterface from '@/components/mobile/MobileAppInterface';
+import ProductTiering from '@/components/tiering/ProductTiering';
 
 // Import mock data
 import { MockDataGenerator } from '@/lib/mockData';
@@ -438,7 +439,7 @@ const WeCareLivingDashboard: React.FC = () => {
       {/* Main Content */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
         <Tabs value={selectedView} onValueChange={(value) => setSelectedView(value as any)} className="space-y-6">
-          <TabsList className="grid w-full grid-cols-9 h-14">
+          <TabsList className="grid w-full grid-cols-10 h-14">
             <TabsTrigger value="overview" className="flex items-center space-x-2">
               <Globe className="w-5 h-5" />
               <span className="font-medium">Overview</span>
@@ -485,6 +486,10 @@ const WeCareLivingDashboard: React.FC = () => {
             <TabsTrigger value="mobile" className="flex items-center space-x-2">
               <Smartphone className="w-5 h-5" />
               <span className="font-medium">Mobile</span>
+            </TabsTrigger>
+            <TabsTrigger value="tiering" className="flex items-center space-x-2">
+              <Crown className="w-5 h-5" />
+              <span className="font-medium">Pricing</span>
             </TabsTrigger>
             <TabsTrigger value="analytics" className="flex items-center space-x-2">
               <BarChart3 className="w-5 h-5" />
@@ -743,6 +748,19 @@ const WeCareLivingDashboard: React.FC = () => {
 
           <TabsContent value="mobile">
             <MobileAppInterface
+              residents={residents}
+              vitalSignsReadings={vitalSignsReadings}
+              breathingPatterns={breathingPatterns}
+              sleepSessions={sleepSessions}
+              vitalSignsAlerts={vitalSignsAlerts}
+              fallEvents={fallEvents}
+              immobilityAlerts={immobilityAlerts}
+              riskAssessments={riskAssessments}
+            />
+          </TabsContent>
+
+          <TabsContent value="tiering">
+            <ProductTiering
               residents={residents}
               vitalSignsReadings={vitalSignsReadings}
               breathingPatterns={breathingPatterns}
