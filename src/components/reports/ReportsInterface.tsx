@@ -33,7 +33,7 @@ import {
   Database, 
   FileSpreadsheet, 
   FileImage, 
-  FilePdf,
+  File,
   RefreshCw,
   ChevronDown,
   ChevronUp,
@@ -426,7 +426,7 @@ const ReportsInterface: React.FC<ReportsProps> = ({
 
   const getFormatIcon = (format: string) => {
     switch (format) {
-      case 'pdf': return <FilePdf className="w-4 h-4" />;
+      case 'pdf': return <File className="w-4 h-4" />;
       case 'excel': return <FileSpreadsheet className="w-4 h-4" />;
       case 'csv': return <FileSpreadsheet className="w-4 h-4" />;
       case 'json': return <Database className="w-4 h-4" />;
