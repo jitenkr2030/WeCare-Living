@@ -401,7 +401,7 @@ const ReportsInterface: React.FC<ReportsProps> = ({
       );
     }
 
-    return filtered.sort((a, b) => b.generatedAt.getTime() - a.generatedAt.getTime());
+    return filtered.sort((a, b) => (b.generatedAt?.getTime() || 0) - (a.generatedAt?.getTime() || 0));
   }, [reports, selectedCategory, selectedType, selectedStatus, searchQuery]);
 
   const getStatusColor = (status: string) => {

@@ -25,7 +25,8 @@ import {
   Wind,
   Shield,
   Pause,
-  Play
+  Play,
+  Lungs
 } from 'lucide-react';
 
 // Import components
