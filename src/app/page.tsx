@@ -411,19 +411,19 @@ const WeCareLivingDashboard: React.FC = () => {
               </div>
               <div className="flex items-center space-x-2">
                 <Activity className="w-5 h-5 text-gray-500" />
-                <span className="text-sm font-medium">{vitalSignsStats.totalReadings} Vital Readings</span>
+                <span className="text-sm font-medium">{systemData?.vitalSignsStats?.totalReadings || 0} Vital Readings</span>
               </div>
               <div className="flex items-center space-x-2">
                 <Shield className="w-5 h-5 text-gray-500" />
-                <span className="text-sm font-medium">{fallDetectionStats.fallsDetected} Falls Detected</span>
+                <span className="text-sm font-medium">{systemData?.fallDetectionStats?.fallsDetected || 0} Falls Detected</span>
               </div>
               <div className="flex items-center space-x-2">
                 <Thermometer className="w-5 h-5 text-gray-500" />
-                <span className="text-sm font-medium">{systemStats.temperature}°C</span>
+                <span className="text-sm font-medium">{systemData?.systemStats?.temperature || 22}°C</span>
               </div>
               <div className="flex items-center space-x-2">
                 <Clock className="w-5 h-5 text-gray-500" />
-                <span className="text-sm font-medium">Uptime: {systemStats.uptime}%</span>
+                <span className="text-sm font-medium">Uptime: {systemData?.systemStats?.uptime || 95}%</span>
               </div>
               <div className="flex items-center space-x-2">
                 <span className="text-sm text-gray-600">Last Update:</span>
@@ -573,7 +573,7 @@ const WeCareLivingDashboard: React.FC = () => {
                       <div>
                         <p className="text-purple-100 text-sm">Data Quality</p>
                         <p className="text-3xl font-bold capitalize">{systemStats.dataQuality}</p>
-                        <p className="text-purple-100 text-sm mt-1">{vitalSignsStats.totalReadings} Readings</p>
+                        <p className="text-purple-100 text-sm mt-1">{systemData?.vitalSignsStats?.totalReadings || 0} Readings</p>
                       </div>
                       <Brain className="w-10 h-10 text-purple-200" />
                     </div>
@@ -711,7 +711,7 @@ const WeCareLivingDashboard: React.FC = () => {
               breathingPatterns={breathingPatterns}
               sleepSessions={sleepSessions}
               vitalSignsAlerts={vitalSignsAlerts}
-              stats={vitalSignsStats}
+              stats={systemData?.vitalSignsStats || { totalReadings: 0, averageHeartRate: 70, averageBreathingRate: 16, alertsCount: 0 }}
               residentProfiles={residentProfiles}
               wellnessIndicators={wellnessIndicators}
               onRefresh={handleRefresh}
@@ -811,7 +811,7 @@ const WeCareLivingDashboard: React.FC = () => {
                     <CardContent>
                       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                         <div className="text-center p-4 bg-blue-50 rounded-lg">
-                          <p className="text-2xl font-bold text-blue-600">{vitalSignsStats.totalReadings}</p>
+                          <p className="text-2xl font-bold text-blue-600">{systemData?.vitalSignsStats?.totalReadings || 0}</p>
                           <p className="text-sm text-gray-600">Total Vital Readings</p>
                         </div>
                         <div className="text-center p-4 bg-green-50 rounded-lg">
