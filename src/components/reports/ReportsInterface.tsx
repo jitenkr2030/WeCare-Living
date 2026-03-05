@@ -606,54 +606,54 @@ const ReportsInterface: React.FC<ReportsProps> = ({
                       </div>
                       <div className="flex-1">
                         <div className="flex items-center space-x-3 mb-2">
-                          <h3 className="font-semibold">{report.name}</h3>
+                          <h3 className="font-semibold">{report.name || 'Unknown Report'}</h3>
                           <Badge variant="outline" className="text-xs">
-                            {report.type}
+                            {report.type || 'unknown'}
                           </Badge>
                           <Badge variant="secondary" className="text-xs">
-                            {report.category.replace('_', ' ')}
+                            {(report.category || 'unknown').replace('_', ' ')}
                           </Badge>
                           <Badge className={getStatusColor(report.status)} className="text-xs">
-                            {report.status}
+                            {report.status || 'unknown'}
                           </Badge>
                         </div>
                         
-                        <p className="text-gray-700 mb-3">{report.description}</p>
+                        <p className="text-gray-700 mb-3">{report.description || 'No description available'}</p>
                         
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-3">
                           <div className="space-y-1">
                             <div className="flex items-center space-x-2 text-sm">
                               <Calendar className="w-4 h-4 text-gray-400" />
-                              <span>{report.generatedAt.toLocaleString()}</span>
+                              <span>{report.generatedAt?.toLocaleString() || 'Unknown'}</span>
                             </div>
                             {report.scheduledFor && (
                               <div className="flex items-center space-x-2 text-sm">
                                 <Clock className="w-4 h-4 text-gray-400" />
-                                <span>Scheduled: {report.scheduledFor.toLocaleString()}</span>
+                                <span>Scheduled: {report.scheduledFor?.toLocaleString() || 'Unknown'}</span>
                               </div>
                             )}
                           </div>
                           <div className="space-y-1">
                             <div className="flex items-center space-x-2 text-sm">
-                              {getFormatIcon(report.format)}
-                              <span>{report.format.toUpperCase()}</span>
+                              {getFormatIcon(report.format || 'unknown')}
+                              <span>{(report.format || 'unknown').toUpperCase()}</span>
                             </div>
                             <div className="flex items-center space-x-2 text-sm">
                               <Database className="w-4 h-4 text-gray-400" />
-                              <span>{report.fileSize} MB</span>
+                              <span>{report.fileSize || 0} MB</span>
                             </div>
                           </div>
                           <div className="space-y-1">
-                            {report.metrics.totalRecords > 0 && (
+                            {(report.metrics?.totalRecords || 0) > 0 && (
                               <div className="flex items-center space-x-2 text-sm">
                                 <BarChart3 className="w-4 h-4 text-gray-400" />
-                                <span>{report.metrics.totalRecords.toLocaleString()} records</span>
+                                <span>{(report.metrics?.totalRecords || 0).toLocaleString()} records</span>
                               </div>
                             )}
-                            {report.metrics.accuracy > 0 && (
+                            {(report.metrics?.accuracy || 0) > 0 && (
                               <div className="flex items-center space-x-2 text-sm">
                                 <Target className="w-4 h-4 text-gray-400" />
-                                <span>{report.metrics.accuracy}% accuracy</span>
+                                <span>{(report.metrics?.accuracy || 0)}% accuracy</span>
                               </div>
                             )}
                           </div>
