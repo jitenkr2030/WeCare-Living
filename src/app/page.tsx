@@ -41,7 +41,8 @@ import {
   XCircle,
   AlertCircle,
   Play,
-  Pause
+  Pause,
+  Crown
 } from 'lucide-react';
 
 // Import existing components
