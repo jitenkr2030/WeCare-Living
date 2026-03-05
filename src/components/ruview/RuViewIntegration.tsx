@@ -43,7 +43,6 @@ import {
   HardDrive, 
   Battery, 
   Thermometer, 
-  Wind, 
   Globe, 
   MapPin, 
   Navigation, 
