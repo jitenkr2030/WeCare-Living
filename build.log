@@ -1,0 +1,34 @@
+
+> nextjs_tailwind_shadcn_ts@0.2.0 build
+> next build && cp -r .next/static .next/standalone/.next/ && cp -r public .next/standalone/
+
+▲ Next.js 16.1.3 (Turbopack)
+- Environments: .env
+
+  Creating an optimized production build ...
+✓ Compiled successfully in 7.9s
+  Skipping validation of types
+  Collecting page data using 3 workers ...
+  Generating static pages using 3 workers (0/11) ...
+  Generating static pages using 3 workers (2/11) 
+  Generating static pages using 3 workers (5/11) 
+  Generating static pages using 3 workers (8/11) 
+✓ Generating static pages using 3 workers (11/11) in 160.8ms
+  Finalizing page optimization ...
+
+Route (app)
+┌ ○ /
+├ ○ /_not-found
+├ ƒ /api
+├ ƒ /api/vital-signs
+├ ƒ /api/vital-signs/alerts
+├ ƒ /api/vital-signs/breathing-patterns
+├ ƒ /api/vital-signs/readings
+├ ƒ /api/vital-signs/sleep-sessions
+├ ○ /fall-detection
+└ ○ /vital-signs
+
+
+○  (Static)   prerendered as static content
+ƒ  (Dynamic)  server-rendered on demand
+
