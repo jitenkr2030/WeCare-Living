@@ -60,7 +60,7 @@ const BreathingRateMonitor: React.FC<BreathingRateMonitorProps> = ({
       <CardHeader className="pb-3">
         <CardTitle className="flex items-center justify-between">
           <div className="flex items-center space-x-2">
-            <Lungs className="w-5 h-5 text-blue-600" />
+            <Activity className="w-5 h-5 text-blue-600" />
             <span>Breathing Rate</span>
           </div>
           <div className="flex items-center space-x-2">
