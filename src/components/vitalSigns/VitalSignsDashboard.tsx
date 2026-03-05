@@ -25,8 +25,7 @@ import {
   Wind,
   Shield,
   Pause,
-  Play,
-  Lungs
+  Play
 } from 'lucide-react';
 
 // Import components
@@ -234,7 +233,7 @@ const VitalSignsDashboard: React.FC<VitalSignsDashboardProps> = ({
             <span>Overview</span>
           </TabsTrigger>
           <TabsTrigger value="breathing" className="flex items-center space-x-2">
-            <Lungs className="w-4 h-4" />
+            <Wind className="w-4 h-4" />
             <span>Breathing</span>
             {residentBreathingPatterns.filter(p => p.severity !== 'normal').length > 0 && (
               <Badge variant="destructive" className="text-xs">
